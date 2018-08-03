@@ -1,0 +1,18 @@
+<section>
+  <div class="container">
+    <div class="title">
+      {{item.title}}
+    </div>
+    <div class="good">
+      <div class="address">
+        {{item.address}}
+      </div>
+      <div class="images">
+        <img *ngFor="let img of item.imgs" src="../../assets/images/rent_imgs/{{img}}" alt="">
+      </div>
+      <div class="description">
+        {{item.description}}
+      </div>
+    </div>
+  </div>
+</section>

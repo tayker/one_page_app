@@ -1,0 +1,20 @@
+<li>
+  <a [routerLink]="['/rent', i]" class="title">
+    {{item.title}}
+  </a>
+  <div class="address">
+    {{item.address}}
+  </div>
+  <div class="row">
+    <swiper [config]="config">
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-wrapper">
+        <img class="swiper-slide" *ngFor="let img of item.imgs" src="../../assets/images/rent_imgs/{{img}}" alt="">
+      </div>
+    </swiper>
+    <div class="description">
+      {{item.description}}
+    </div>
+  </div>
+</li>

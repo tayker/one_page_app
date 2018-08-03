@@ -20,8 +20,14 @@
     "@angular/platform-browser": "^6.0.2",
     "@angular/platform-browser-dynamic": "^6.0.2",
     "@angular/router": "^6.0.2",
+    "angular2-infinite-scroll": "^0.3.5",
+    "angular2-useful-swiper": "^5.0.1",
     "core-js": "^2.5.4",
+    "ngx-infinite-scroll": "^6.0.1",
+    "normalize-scss": "^7.0.1",
+    "normalize.scss": "^0.1.0",
     "rxjs": "^6.0.0",
+    "swiper": "^3.4.2",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {

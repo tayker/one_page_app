@@ -27,9 +27,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "./node_modules/normalize.scss/normalize.scss",
+              "./node_modules/swiper/dist/css/swiper.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/swiper/dist/js/swiper.min.js"
+            ]
           },
           "configurations": {
             "production": {

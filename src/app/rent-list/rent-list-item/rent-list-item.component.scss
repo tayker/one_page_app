@@ -1,0 +1,27 @@
+swiper{
+  height: auto;
+  width: 100%;
+  max-width: 400px;
+  margin-right: 20px;
+  img{
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.row{
+  display: flex;
+  justify-content: space-between;
+}
+li{
+  text-align: left;
+  margin-bottom: 20px;
+}
+.title{
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #8db9ca;
+}
+.address{
+  font-size: 26px;
+  color: #52565e;
+}

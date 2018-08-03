@@ -1,0 +1,14 @@
+<section>
+  <div class="container">
+    <div class="title">
+      Rent Today, sleep tomorrow
+    </div>
+    <ul infiniteScroll
+        [infiniteScrollDistance]="1"
+        [infiniteScrollThrottle]="50"
+        (scrolled)="onScroll()"
+        [scrollWindow]="false">
+      <app-rent-list-item *ngFor="let item of list; let i = index" [item]="item" [i]="i"></app-rent-list-item>
+    </ul>
+  </div>
+</section>
