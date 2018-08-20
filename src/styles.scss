@@ -12,6 +12,12 @@ body{
 h1{
   font-size: 60px;
 }
+.title{
+  color: #a3a3a3;
+  font-size: 40px;
+  user-select: none;
+  font-weight: bold;
+}
 section, main{
   height: 100%;
   -webkit-background-size: cover;

@@ -9,7 +9,9 @@ export class NavComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  showEl(){
+    alert()
   }
+  ngOnInit() {}
 
 }

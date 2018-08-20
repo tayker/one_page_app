@@ -7,6 +7,24 @@ header{
   position: absolute;
   width: 100%;
   max-width: 200px;
+  -webkit-transform: translateX(-90%);
+  -moz-transform: translateX(-90%);
+  -ms-transform: translateX(-90%);
+  -o-transform: translateX(-90%);
+  transform: translateX(-90%);
+  -webkit-transition: transform .2s;
+  -moz-transition: transform .2s;
+  -ms-transition: transform .2s;
+  -o-transition: transform .2s;
+  transition: transform .2s;
+
+  &.active{
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
 }
 nav{
   width: 100%;
@@ -31,7 +49,7 @@ nav{
     -ms-transition: color .3s;
     -o-transition: color .3s;
     transition: color .3s;
-    
+
     &.current{
       background-color: #0099e5;
     }
