@@ -14,6 +14,7 @@ import {DataService} from './data.service';
 import {RentService} from './services/rent.service';
 import { SingleRentComponent } from './single-rent/single-rent.component';
 import { InfiniteScrollModule} from 'ngx-infinite-scroll';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
   { path: '', component: MainpageComponent},
@@ -40,7 +41,8 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     SwiperModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    BrowserAnimationsModule
   ],
   providers: [DataService, RentService],
   bootstrap: [AppComponent]

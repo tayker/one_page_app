@@ -1,9 +1,11 @@
-<header #header (mouseenter)="header.hide" (mouseleave)="hideEl()">
+<header (mouseenter)="toggleVisibility()"
+        (mouseleave)="toggleVisibility()"
+        [class.active]="isActive">
   <nav>
-    <a routerLink="">Homepage</a>
-    <a routerLink="/rent">Rent</a>
-    <a routerLink="/order">Order</a>
-    <a routerLink="/register">Register</a>
-    <a routerLink="/login">Login</a>
+    <a routerLink="" [class.current]="checkRouter('/')">Homepage</a>
+    <a routerLink="/rent" [class.current]="checkRouter('/rent')">Rent</a>
+    <a routerLink="/order" [class.current]="checkRouter('/order')">Order</a>
+    <a routerLink="/register" [class.current]="checkRouter('/register')">Register</a>
+    <a routerLink="/login" [class.current]="checkRouter('/login')">Login</a>
   </nav>
 </header>

@@ -18,13 +18,16 @@ h1{
   user-select: none;
   font-weight: bold;
 }
+.main-wrapper{
+  height: 100%;
+}
 section, main{
   height: 100%;
   -webkit-background-size: cover;
   background-size: cover;
 }
 .container{
-  padding: 40px 20px 20px 200px;
+  padding: 40px 20px 20px 20px;
   text-align: center;
   display: flex;
   justify-content: center;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-nav',
@@ -7,11 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  isActive: boolean = false;
+  constructor(private router: Router) { }
 
-  showEl(){
-    alert()
+  toggleVisibility(){
+    this.isActive = !this.isActive;
+  }
+  checkRouter(val){
+    return this.router.url === val;
   }
   ngOnInit() {}
-
 }

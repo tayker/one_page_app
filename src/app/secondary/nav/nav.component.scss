@@ -17,6 +17,7 @@ header{
   -ms-transition: transform .2s;
   -o-transition: transform .2s;
   transition: transform .2s;
+  z-index: 9;
 
   &.active{
     -webkit-transform: translateX(0);
@@ -48,7 +49,7 @@ nav{
     -moz-transition: color .3s;
     -ms-transition: color .3s;
     -o-transition: color .3s;
-    transition: color .3s;
+    transition: .3s;
 
     &.current{
       background-color: #0099e5;
