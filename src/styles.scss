@@ -22,7 +22,8 @@ h1{
   height: 100%;
 }
 section, main{
-  height: 100%;
+  height: 100vh;
+  overflow-y: auto;
   -webkit-background-size: cover;
   background-size: cover;
 }
@@ -41,4 +42,55 @@ ul{
 }
 li{
   list-style: none;
+}
+
+.form{
+  &--register{
+    .array-field{
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .array-field div{
+      width: 100%;
+      display: flex;
+    }
+    input, select{
+      width: 100%;
+      font-size: 20px;
+      padding: 5px 10px;
+      outline: none;
+      border: 2px solid #999;
+      -webkit-transition: border-color .24s;
+      -moz-transition: border-color .24s;
+      -ms-transition: border-color .24s;
+      -o-transition: border-color .24s;
+      transition: border-color .24s;
+
+      &:focus{
+        border-color: #00a4e4;
+      }
+
+      &:hover{
+        border-color: #00205b;
+      }
+    }
+    select{
+      cursor: pointer;
+    }
+    button{
+      cursor: pointer;
+      background-color: #000;
+      color: #fff;
+      padding: 5px 10px;
+    }
+    .field{
+      margin-bottom: 20px;
+    }
+
+  }
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

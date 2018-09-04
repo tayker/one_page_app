@@ -25,3 +25,23 @@ export const fadeAnimation = trigger('fadeAnimation', [
     )
   ])
 ]);
+
+export const transformTopAnimation = trigger('transformTopAnimation',[
+  transition('* => *', [
+    query(
+      ':enter',
+      [style({transform: 'translateY(-100%)'})],
+      {optional: true}
+    ),
+    query(
+      ':leave',
+      [style({transform: 'translateY(0)'}), animate('0.3s', style({transform: 'translateY(-100%)'}))],
+      {optional: true}
+    ),
+    query(
+      ':enter',
+      [style({transform: 'translateY(-100%)'}), animate('0.3s', style({transform: 'translateY(0)'}))],
+      {optional: true}
+    )
+  ])
+]);

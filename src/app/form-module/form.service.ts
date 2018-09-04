@@ -30,10 +30,10 @@ export class FormService {
     gender: {
       type: 'radio',
       value: 'male',
-      label: 'Choose your destiny',
+      label: 'Choose your',
       options: [
-        { label: 'Female', value: 'female' },
-        { label: 'Male', value: 'male' }
+        { label: 'Female', value: 'female', class: 'radio-item__female' },
+        { label: 'Male', value: 'male', class: 'radio-item__male'}
       ]
     },
     country: {

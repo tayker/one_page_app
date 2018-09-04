@@ -1,0 +1,75 @@
+.radio-wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin: 14px 0;
+}
+
+.radio-item {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+[type="radio"] {
+  margin: 10px 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border: 2px solid;
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+}
+
+[type="radio"]:before {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: lightseagreen;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: opacity .2s;
+  -moz-transition: opacity .2s;
+  -ms-transition: opacity .2s;
+  -o-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+[type="radio"]:checked:before {
+  animation: .3s show-bounce forwards;
+}
+
+@keyframes show-bounce {
+  50% {
+    -webkit-transform: translate(-50%, -50%) scale(1.2) rotate(45deg);
+    -moz-transform: translate(-50%, -50%) scale(1.2) rotate(45deg);
+    -ms-transform: translate(-50%, -50%) scale(1.2) rotate(45deg);
+    -o-transform: translate(-50%, -50%) scale(1.2) rotate(45deg);
+    transform: translate(-50%, -50%) scale(1.2) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1) rotate(180deg);
+    -moz-transform: translate(-50%, -50%) scale(1) rotate(180deg);
+    -ms-transform: translate(-50%, -50%) scale(1) rotate(180deg);
+    -o-transform: translate(-50%, -50%) scale(1) rotate(180deg);
+    transform: translate(-50%, -50%) scale(1) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+.radio-item__female [type="radio"]{
+  border-color: lightpink;
+}
+.radio-item__male [type="radio"]{
+  border-color: lightblue;
+}

@@ -1,7 +1,7 @@
 <form [formGroup]="myForm">
   <ng-container *ngFor="let prop of formProps">
     <ng-container [ngSwitch]="prop.type" *ngIf="isDependent(prop.dependency)">
-      <label class="label">{{prop.label}}:</label>
+      <label class="label">{{prop.label}}:
       <ng-container *ngIf="!prop.array; else textArrayTemplate">
         <app-text *ngSwitchCase="'text'" [prop]="prop" [myForm]="myForm" [case]="'control'"></app-text>
       </ng-container>
@@ -26,14 +26,11 @@
       <ng-template #numberArrayTemplate>
         <app-number *ngSwitchCase="'number'" [prop]="prop" [myForm]="myForm" [case]="'array'" (onRemoveControl)="removeControl($event)"></app-number>
       </ng-template>
-      <button *ngIf="prop.array" (click)="addContact(prop.array)" class="array-add-btn">add new control {{prop.label}}</button>
+      </label>
+      <button *ngIf="prop.array" (click)="addContact(prop.array)" class="array-add-btn">Add {{prop.label}}</button>
     </ng-container>
-
   </ng-container>
   <button (click)="submit()">
     Submit
   </button>
 </form>
-<div>
-  {{myForm.value | json}}
-</div>
